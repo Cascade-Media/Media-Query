@@ -1,0 +1,172 @@
+	/* Responsive debug test */	
+	body, html {padding:0; margin:0; overflow:hidden;}
+	#title {width:100%; height:50px; margin:0 auto; padding-top:20px; text-align:center; font-family:ebrima, "arial"; color:#f0f0f0; background:#0f0f0f;}
+	
+	#desktop, #tablet_1, #tablet_2, #mobile_1, #mobile_2, #landscape {width:150px; height:auto; padding:20px 25px 40px 25px; top:32%; position:absolute; text-align:center; font-family:arial; color:#f0f0f0; background:#0f0f0f;}
+	main {width:200px; margin:0 auto; position:absolute; top:0; left:0; bottom:0; right:0; }
+	/* Main is 200px as it takes the width and padding of the responsive ID's */
+	
+	
+	
+	
+	/* Desktop */
+	@media all and (max-width:1920px) and (min-width:1201px){
+		body, html {background:#f0f0f0;} /* Result should be "Grey/White" */
+				
+		#desktop {display:initial;}
+		#tablet_1 {display:none;}
+		#tablet_2 {display:none;}
+		#mobile_1 {display:none;}
+		#mobile_2 {display:none;}
+		#landscape {display:none;}
+		#kindle_fire {display:none;}		
+		#ipad_mini {display:none;}
+		#ipad_3-4 {display:none;}
+				
+	}	
+	
+	/* Tablet 1 */
+	@media all and (max-width:1200px) and (min-width:951px){
+		body, html {background:#e84343;} /* Result should be "Red" */
+		
+		#desktop {display:none;}
+		#tablet_1 {display:initial;}
+		#tablet_2 {display:none;}
+		#mobile_1 {display:none;}
+		#mobile_2 {display:none;}
+		#landscape {display:none;}
+		#kindle_fire {display:none;}
+		#ipad_mini {display:none;}
+		#ipad_3-4 {display:none;}
+				
+	}
+
+	/* Tablet 2 */
+	@media all and (max-width:940px) and (min-width:641px){
+		body, html {background:#299b46;} /* Result should be "Green" */
+		
+		#desktop {display:none;}
+		#tablet_1 {display:none;}
+		#tablet_2 {display:initial;}
+		#mobile_1 {display:none;}
+		#mobile_2 {display:none;}
+		#landscape {display:none;}
+		#kindle_fire {display:none;}
+		#ipad_mini {display:none;}
+		#ipad_3-4 {display:none;}
+		
+	}
+	
+	/* Mobile 1 */
+	@media all and (max-width:640px) and (min-width:321px){
+		body, html {background:#29699b;} /* Result should be "Blue" */
+				
+		#desktop {display:none;}
+		#tablet_1 {display:none;}
+		#tablet_2 {display:none;}
+		#mobile_1 {display:initial;}
+		#mobile_2 {display:none;}
+		#landscape {display:none;}
+		#kindle_fire {display:none;}	
+		#ipad_mini {display:none;}
+		#ipad_3-4 {display:none;}
+				
+	}
+	
+	/* Mobile 2 */
+	/* Minimum Content width 320px */
+	@media all and (max-width:320px) and (min-width:0px){
+		body, html {background:#0f0f0f; min-width:320px;} /* Result should be "Dark Grey or Black" */
+		#title {min-width:150px; max-width:320px; height:auto; text-align:center; padding-bottom:20px; color:#0f0f0f; background:#f0f0f0; position:absolute;}	
+		
+		#desktop, #tablet_1, #tablet_2, #mobile_1, #mobile_2, #landscape {color:#0f0f0f; background:#f0f0f0;}
+		
+		#desktop {display:none;}
+		#tablet_1 {display:none;}
+		#tablet_2 {display:none;}
+		#mobile_1 {display:none;}
+		#mobile_2 {display:initial;}
+		#landscape {display:none;}
+		#kindle_fire {display:none;}
+		#ipad_mini {display:none;}
+		#ipad_3-4 {display:none;}
+		
+	}
+	
+	/* Landscape Orientation */
+	@media(max-device-width:1280px)and (orientation: landscape){
+		body, html {background:#ffe389;} /* Result should be "Yellow" */
+		#landscape {width:180px; height:180px;}
+		
+		#desktop {display:none;}
+		#tablet_1 {display:none;}
+		#tablet_2 {display:none;}
+		#mobile_1 {display:none;}
+		#mobile_2 {display:none;}
+		#landscape {display:initial;}
+		#kindle_fire {display:none;}
+		#ipad_mini {display:none;}
+		#ipad_3-4 {display:none;}
+				
+	}
+	
+	/* Landscape Orientation Kindle Fire */
+	@media (min-device-width:2560px) and (max-device-height:1600px) and (orientation:landscape) and (-webkit-min-device-pixel-ratio: 1.5){
+		body, html {background:#e2ab68;} /* Result should be "Orange" */
+		main {width:460px; margin:0 auto; position: absolute; top:0; left: 0; bottom: 0; right: 0;}
+		/* Main is 460px as it takes the width and padding of the responsive ID's */
+		
+		#kindle_fire {width:500px; height:500px; padding:20px; top:35%; position:absolute; text-align:center; font-family:arial; font-size:2.5em; color:#f0f0f0; background:#0f0f0f;}
+		
+		#desktop {display:none;}
+		#tablet_1 {display:none;}
+		#tablet_2 {display:none;}
+		#mobile_1 {display:none;}
+		#mobile_2 {display:none;}
+		#landscape {display:none;}
+		#kindle_fire {display:initial;}
+		#ipad_mini {display:none;}
+		#ipad_3-4 {display:none;}
+		
+	}
+	
+	
+	/* Portrait Orientation Ipad mini */
+	@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1){
+		body, html {background:#e2ab68;} /* Result should be "Orange" */
+		main {width:460px; margin:0 auto; position: absolute; top:0; left: 0; bottom: 0; right: 0;}
+		/* Main is 460px as it takes the width and padding of the responsive ID's */
+		
+		#ipad_mini {width:500px; height:500px; padding:20px; top:35%; position:absolute; text-align:center; font-family:arial; font-size:2.5em; color:#f0f0f0; background:#0f0f0f;}
+		
+		#desktop {display:none;}
+		#tablet_1 {display:none;}
+		#tablet_2 {display:none;}
+		#mobile_1 {display:none;}
+		#mobile_2 {display:none;}
+		#landscape {display:none;}
+		#kindle_fire {display:none;}
+		#ipad_mini {display:inline;}
+		#ipad_3-4 {display:none;}
+		
+	}
+	
+	/* Portrait Orientation Ipad 3-4 */
+	@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2){
+		body, html {background:#e2ab68;} /* Result should be "Orange" */
+		main {width:380px; height:800px; margin:0 auto; position: absolute; top:0; left: 0; bottom: 0; right: 0;}
+		/* Main is 460px as it takes the width and padding of the responsive ID's */
+		
+		#ipad_3-4 {width:420px; height:auto; padding:20px; top:12%; position:absolute; text-align:center; font-family:arial; font-size:2.5em; color:#f0f0f0; background:#0f0f0f;}
+		
+		#desktop {display:none;}
+		#tablet_1 {display:none;}
+		#tablet_2 {display:none;}
+		#mobile_1 {display:none;}
+		#mobile_2 {display:none;}
+		#landscape {display:none;}
+		#kindle_fire {display:none;}
+		#ipad_mini {display:none;}
+		#ipad_3-4 {display:inline;}
+		
+	}

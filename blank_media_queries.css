@@ -1,0 +1,56 @@
+	/* Blank media queries sheet for testing your own responsive features */
+	
+	/* Desktop */
+	@media all and (max-width:1920px) and (min-width:1201px){
+	
+				
+	}	
+	
+	/* Tablet 1 */
+	@media all and (max-width:1200px) and (min-width:951px){
+
+				
+	}
+
+	/* Tablet 2 */
+	@media all and (max-width:940px) and (min-width:641px){
+
+	}
+	
+	/* Mobile 1 */
+	@media all and (max-width:640px) and (min-width:321px){
+
+	
+	}
+	
+	/* Mobile 2 */
+	/* Minimum Content width 320px */
+	@media all and (max-width:320px) and (min-width:0px){
+
+		
+	}
+	
+	/* Landscape Orientation */
+	@media(max-device-width:1280px)and (orientation: landscape){
+
+				
+	}
+	
+	/* Landscape Orientation Kindle Fire */
+	@media (min-device-width:2560px) and (max-device-height:1600px) and (orientation:landscape) and (-webkit-min-device-pixel-ratio: 1.5){
+
+		
+	}
+	
+	
+	/* Portrait Orientation Ipad mini */
+	@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1){
+
+		
+	}
+	
+	/* Portrait Orientation Ipad 3-4 */
+	@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2){
+
+		
+	}
